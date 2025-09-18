@@ -6,6 +6,7 @@ const path = require('path')
 dotenv.config({ path: path.join(__dirname, 'config', 'config.env') })
 
 connectDatabase()
+app.use(express.json())
 
 const products = require('./routes/product')
 const orders = require('./routes/order')
